@@ -27,6 +27,7 @@ h1 {
 }
 
 main {
+  background-color: aqua;
   height: 100%;
   padding-left: 7%;
   padding-bottom: 1vh;
