@@ -1,15 +1,7 @@
-
-
-* {
-  box-sizing: border-box;
-}
-
-
 body {
   min-height: 100vh;
-  background: #32A5B4;
+  background: #55A5C6;
   font-family: 'Optima', 'Batang', Georgia, serif;
-  color: white;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -17,22 +9,13 @@ body {
 h1 {
     display: inline-block;
     position: relative;
-    text-decoration: none;
     margin: 0;
     font-weight: 400;
     font-size: 40px;
+    padding-left: 3%;
     padding-right: 3%;
     padding-top: 2%;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-main {
-  background-color: aqua;
-  height: 100%;
-  padding-left: 7%;
-  padding-bottom: 1vh;
-  width: 90%;
-  position: relative;
+    color: black
 }
 
 
