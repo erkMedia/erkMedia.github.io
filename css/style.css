@@ -7,8 +7,10 @@ html {
 }
 
 h1 {
-  padding-top: 3%;
+  padding-top: 1%;
   padding-left: 3%;
   color: #d1e0e0;
-  text-size: 11px;
+  font-size: 32px;
+  font-family: 'Niramit', sans-serif;
+  font-weight: 300;
 }
