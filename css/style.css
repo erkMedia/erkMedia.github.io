@@ -5,3 +5,10 @@ html {
   position: fixed;
   background: rgb(30,30,30);
 }
+
+h1 {
+  padding-top: 3%;
+  padding-left: 3%;
+  color: #d1e0e0;
+  text-size: 11px;
+}
