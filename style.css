@@ -1,6 +1,10 @@
-body {
+body,
+html {
   min-height: 100vh;
-  background: #3e4c60;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  background: rgb(30,30,30);
   font-family: 'Verdana', monospace, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
