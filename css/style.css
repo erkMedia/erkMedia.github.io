@@ -38,10 +38,10 @@ p, span{
     -moz-transition: color 0.4s ease-out;
     -webkit-transition: color 0.4s ease-out;
 	letter-spacing: 12.1px;
-	font-size: 17px;
+	font-size: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     p, span{
         color: #333333;
         transition: color 0.4s ease-out;
@@ -49,7 +49,7 @@ p, span{
         -moz-transition: color 0.4s ease-out;
         -webkit-transition: color 0.4s ease-out;
         letter-spacing: 12.1px;
-        font-size: 25px;
+        font-size: 32px;
     }
 }
 
