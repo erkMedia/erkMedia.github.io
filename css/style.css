@@ -1,121 +1,66 @@
-/* Tiny reset thingy */
-
-body, html{
-	margin:0;
-	padding:0;
-	font-size: 12px;
-	font-family: 'Niramit', sans-serif;
-	font-weight: 200;
-	background-color: #e3e7f2;
-    }
-
-.wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-  padding: 20px;
+body{
+	background: #000;
+	color: #fff;
+	font-family: Helvetica, Arial;
+	text-align: justify;
+	pointer-events: none;
+  -webkit-user-select: none;
 }
 
-.section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 70vh;
-  
-  /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 200;
-  color: #a7afbc;
+p, span{
+	color: #333333;
+	transition: color 0.4s ease-out;
+	-ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+	letter-spacing: 12.1px;
+	font-size: 17px;
 }
 
-.parallax::after {
-  /* Display and position the pseudo-element */
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(2);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */ 
-  z-index: -1;
+#midnight{
+	color: #000;
+	letter-spacing: 23px;
 }
 
-/* The styling for the static div. */
-.static {
-  /*background-image: url('../media/5378.jpg');*/
-  background-color: #2f3c49;
-  background-image: radial-gradient(2);
-  padding: 30px;
-  text-align: justify;
+#it, #is, span.active{
+	color: #fff !important;
+	transition: color 0.4s ease-out;
+	-ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
 }
 
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.bg1::after {
-  background-image: url('../media/5856.jpg');
+#text-clock{
+	width: 242px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
 }
-    
 
-@media only screen and (max-width: 600px) {
-    
-    body, html{
-	   margin:0;
-	   padding:0;
-	   font-size: 15px;
-    }
-    .section {
-      /* Needed for children to be absolutely positioned relative to the parent. */
-      position: relative;
-      /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-      height: 60vh;
+#line-1, #line-1 span{
+	letter-spacing: 13.9px;
+}
+#line-2, #line-2 span{
+	letter-spacing: 11.3px;
+}
+#line-7, #line-7 span{
+	letter-spacing: 11.8px;
+}
+#line-8, #line-8 span{
+	letter-spacing: 12.3px;
+}
+#line-9, #line-9 span{
+	letter-spacing: 11.6px;
+}
+#line-10, #line-10 span{
+	letter-spacing: 11.6px;
+}
 
-      /* For text formatting. */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 20px;
-      font-weight: 200;
-      color: #a7afbc;
-    }
-    
-      .static {
-      background-color: #2f3c49;
-      padding: 40px;
-      text-align: left;
-      padding: 50px;
-      font-weight: 300;
-    }
-    
-    .wrapper {
-      /* The height needs to be set to a fixed value for the effect to work.
-       * 100vh is the full height of the viewport. */
-      height: 100vh;
-      /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-      overflow-x: hidden;
-      /* Enable scrolling on the page. */
-      overflow-y: auto;
-      /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-      perspective: 4px;
-      padding: 10px;
-    }
-
-      /* Sets the actual background images to adorable kitties. This part is crucial. */
-     .bg1::after {
-      background-image: url('../media/5856.jpg');
-    }
-
- }
+.hidden{
+	display: none;
+}
