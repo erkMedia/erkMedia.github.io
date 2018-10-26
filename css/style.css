@@ -57,9 +57,9 @@ body, html{
 
 /* The styling for the static div. */
 .static {
-  background-image: url('../media/5378.jpg');
+  /*background-image: url('../media/5378.jpg');*/
   background-color: #2f3c49;
-  background-blend-mode: color-burn;
+  background-image: radial-gradient(2);
   padding: 30px;
   text-align: justify;
 }
@@ -93,9 +93,7 @@ body, html{
     }
     
       .static {
-      background-image: url('../media/5378.jpg');
       background-color: #2f3c49;
-      background-blend-mode: color-burn;
       padding: 40px;
       text-align: left;
       padding: 50px;
