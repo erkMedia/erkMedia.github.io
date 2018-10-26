@@ -7,7 +7,7 @@ body, html{
 	font-family: 'Niramit', sans-serif;
 	font-weight: 200;
 	background-color: #e3e7f2;
-	}
+    }
 
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
@@ -33,7 +33,7 @@ body, html{
   align-items: center;
   justify-content: center;
   font-weight: 200;
-  color: #e3e7f2;
+  color: #a7afbc;
 }
 
 .parallax::after {
@@ -57,7 +57,9 @@ body, html{
 
 /* The styling for the static div. */
 .static {
-  background: #2f3c49;
+  background-image: url('../media/5378.jpg');
+  background-color: #2f3c49;
+  background-blend-mode: color-burn;
   padding: 30px;
   text-align: justify;
 }
@@ -71,10 +73,10 @@ body, html{
 @media only screen and (max-width: 600px) {
     
     body, html{
-        font-size: 15px;
-        background-color: #e3e7f2;
-        }
-
+	   margin:0;
+	   padding:0;
+	   font-size: 15px;
+    }
     .section {
       /* Needed for children to be absolutely positioned relative to the parent. */
       position: relative;
@@ -85,26 +87,37 @@ body, html{
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-bottom: 20px;
       font-weight: 200;
-      color: #e3e7f2;
+      color: #a7afbc;
+    }
+    
+      .static {
+      background-image: url('../media/5378.jpg');
+      background-color: #2f3c49;
+      background-blend-mode: color-burn;
+      padding: 40px;
+      text-align: left;
+      padding: 50px;
+      font-weight: 300;
     }
     
     .wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 5px;
-  padding: 10px;
-}
+      /* The height needs to be set to a fixed value for the effect to work.
+       * 100vh is the full height of the viewport. */
+      height: 100vh;
+      /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+      overflow-x: hidden;
+      /* Enable scrolling on the page. */
+      overflow-y: auto;
+      /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+      perspective: 4px;
+      padding: 10px;
+    }
 
-    /* Sets the actual background images to adorable kitties. This part is crucial. */
-    .bg1::after {
+      /* Sets the actual background images to adorable kitties. This part is crucial. */
+     .bg1::after {
       background-image: url('../media/5856.jpg');
     }
 
-}
+ }
