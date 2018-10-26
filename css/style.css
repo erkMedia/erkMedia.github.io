@@ -1,4 +1,4 @@
-body, h1 {
+body {
 	background: #000;
 	color: #fff;
 	font-family: Krub, Helvetica, Arial;
@@ -39,6 +39,18 @@ p, span{
     -webkit-transition: color 0.4s ease-out;
 	letter-spacing: 12.1px;
 	font-size: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+    p, span{
+        color: #333333;
+        transition: color 0.4s ease-out;
+        -ms-transition: color 0.4s ease-out;
+        -moz-transition: color 0.4s ease-out;
+        -webkit-transition: color 0.4s ease-out;
+        letter-spacing: 12.1px;
+        font-size: 25px;
+    }
 }
 
 #midnight{
