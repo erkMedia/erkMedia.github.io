@@ -1,12 +1,36 @@
-body{
+body, h1 {
 	background: #000;
 	color: #fff;
-	font-family: Helvetica, Arial;
+	font-family: Krub, Helvetica, Arial;
+    font-weight: 200;
 	text-align: justify;
 	pointer-events: none;
-  -webkit-user-select: none;
+    -webkit-user-select: none;
 }
 
+h1 {
+	font-size: 20px;
+    position: relative;
+	top: 5%;
+    left: 40%;
+    color: #fff;
+	font-family: Krub, Helvetica, Arial;
+    font-weight: 300;
+	pointer-events: none;
+    -webkit-user-select: none;
+}
+
+h2 {
+	font-size: 15px;
+    position: relative;
+	top: 5%;
+    left: 40%;
+    color: #fff;
+	font-family: Krub, Helvetica, Arial;
+    font-weight: 200;
+	pointer-events: none;
+    -webkit-user-select: none;
+}
 p, span{
 	color: #333333;
 	transition: color 0.4s ease-out;
