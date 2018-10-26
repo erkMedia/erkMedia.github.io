@@ -18,19 +18,20 @@ body, html{
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
+  height: 60vh;
   
   /* For text formatting. */
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 200;
   color: #e3e7f2;
 }
 
@@ -55,12 +56,12 @@ body, html{
 
 /* The styling for the static div. */
 .static {
-  background: #324056;
+  background: #2f3c49;
   padding: 30px;
   text-align: justify;
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url('5856.jpg');
+  background-image: url('../media/5856.jpg');
 }
