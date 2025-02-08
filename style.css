@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--primary-color: #333333;
+--secondary-color: #c0a9a9;
+--complimentary-color: #455e5e;
+--contrast-color: #75779a;
+--light-color: #16130d;
+}
+
+.container {
+  background: #191919;
+  min-height: 100vh;
+  font-family: Krub, Helvetica, Arial, sans-serif;
+}
+
+.container-forclock {
+  background: #191919;
+  min-height: 100vh;
+  font-family: Krub, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Krub, Helvetica, Arial;
+    font-weight: 200;
+    text-align: justify;
+    -webkit-user-select: none;
+    -webkit-animation: fadein 10s;
+}
+
+p, span{
+    color: #16130d;
+    transition: color 0.4s ease-out;
+    -ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+    letter-spacing: 12.1px;
+    font-size: 18px;
+}
+
+#midnight{
+    color: #16130d;
+    letter-spacing: 21.5px;
+}
+
+#it, #is, span.active{
+    color: #fff !important;
+    transition: color 0.4s ease-out;
+    -ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+nav a {
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--secondary-color);
+}
+
+#hover_menu {
+  background: -webkit-linear-gradient(gray, darkgray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 22.5px;
+  -webkit-animation: fadein 4s;
+  animation: fadein 2s;
+}
+
+#line-1, #line-1 span{
+    letter-spacing: 13.1px;
+      -webkit-animation: fadein 4s;
+}
+#line-2, #line-2 span{
+    letter-spacing: 11.3px;
+      -webkit-animation: fadein 4s;
+}
+#line-7, #line-7 span{
+    letter-spacing: 11.8px;
+      -webkit-animation: fadein 4s;
+}
+#line-8, #line-8 span{
+    letter-spacing: 12.3px;
+      -webkit-animation: fadein 4s;
+}
+#line-9, #line-9 span{
+    letter-spacing: 11.6px;
+      -webkit-animation: fadein 4s;
+}
+#line-10, #line-10 span{
+    letter-spacing: 11.6px;
+      -webkit-animation: fadein 4s;
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    p, span{
+        color: #16130d;
+        transition: color 0.4s ease-out;
+        -ms-transition: color 0.4s ease-out;
+        -moz-transition: color 0.4s ease-out;
+        -webkit-transition: color 0.4s ease-out;
+        letter-spacing: 12.1px;
+        font-size: 15px;
+    }
+}
+
+section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+section h1 {
+    color: black;
+    font-size: 15px;
+    text-transform: lowercase;
+    padding: 30%;
+    opacity: 0;
+}
+
+section h2 {
+    color: ghostwhite;
+    font-size: 15px;
+    text-transform: lowercase;
+    padding: 30%;
+    opacity: 0;
+}
+
+/* Styles applied on trigger */
+section:target {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+section:target h1 {
+    opacity: 0;
+    animation: 2s fadeIn forwards 0.5s;
+}
+
+section:target h2 {
+    opacity: 0;
+    animation: 2s fadeIn forwards 0.5s;
+}
+
+#clock {
+    background:var(--primary-color);
+}
+
+#about {
+    background: var(--complimentary-color);
+}
+
+#experts {
+    background: var(--contrast-color);
+}
+
+#contact {
+    background: var(--light-color);
+}
+
+@keyframes fadeIn {
+    100% { opacity:1 }
+}
