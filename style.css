@@ -31,7 +31,7 @@ body {
     font-weight: 200;
     text-align: justify;
     -webkit-user-select: none;
-    -webkit-animation: fadein 10s;
+    -webkit-animation: fadein 7s;
 }
 
 p, span{
@@ -151,16 +151,15 @@ section {
     justify-content: center;
     align-items: center;
     padding-left: 60px;
+    padding-top: 10%;
 } 
 
 section h1 {
     color: black;
     font-size: 20px;
     text-transform: lowercase;
-    padding-left: 40%;
-    padding-top: 30%;
-    padding-right: 30%;
-    padding-bottom: 30%;
+    padding-left: 15%;
+    padding-right: 10%;
     opacity: 0;
 }
 
@@ -168,14 +167,13 @@ section h2 {
     color: ghostwhite;
     font-size: 40px;
     text-transform: lowercase;
-    padding-left: 40%;
-    padding-top: 30%;
-    padding-right: 30%;
-    padding-bottom: 30%;
+    padding-left: 15%;
+    padding-right: 10%;
     opacity: 0;
 }
 
 /* Styles applied on trigger */
+
 section:target {
     opacity: 1;
     position: absolute;

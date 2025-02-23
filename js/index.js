@@ -90,4 +90,7 @@ setInterval(function() {
     textClock();
 }, 1000);
 
-textClock();
+if (! window.location.href.endsWith('#clock')) {
+    window.location.href = '#clock';
+    location.reload()
+}
