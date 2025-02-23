@@ -152,6 +152,8 @@ section {
     align-items: center;
     padding-left: 60px;
     padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 10;
 } 
 
 section h1 {
@@ -160,6 +162,8 @@ section h1 {
     text-transform: lowercase;
     padding-left: 15%;
     padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     opacity: 0;
 }
 
@@ -169,6 +173,8 @@ section h2 {
     text-transform: lowercase;
     padding-left: 15%;
     padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     opacity: 0;
 }
 
