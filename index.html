@@ -1,115 +1,162 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="erk media">
+  <title>erk media</title>
+  <script src="https://kit.fontawesome.com/7e1ec67686.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Krub:200" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
+</head>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>erk media</title>
-    <script src="https://kit.fontawesome.com/7e1ec67686.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Krub:200" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
-  </head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#clock" aria-label="Go to Clock Section">
+      <i class="fa-solid fa-clock"></i>
+    </a>
+    <a href="#about" aria-label="Go to About Section">
+      <i class="fa-duotone fa-solid fa-circle-question"></i>
+    </a>
+    <a href="#experts" aria-label="Go to Experts Section">
+      <i class="fa-duotone fa-solid fa-person-half-dress"></i>
+    </a>
+    <a href="#contact" aria-label="Go to Contact Section">
+      <i class="fa-duotone fa-solid fa-address-card"></i>
+    </a>
+  </nav>
 
-  <body>
+  <!-- Clock Section -->
+  <div class="container-forclock">
+    <section id="clock">
+      <div class="text-clock">
+        <p id="hover_menu">erkMedia<br><br><br></p>
+        <p id="line-1">
+          <span id="it" class="active">IT</span>L<span id="is" class="active">IS</span>AS<span id="tgif">GTFI</span>
+        </p>
+        <p id="line-2">AC<span id="quarter" class="desc">QUARTER</span>BS</p>
+        <p>
+          <span id="twenty" class="desc">TWENTY</span>
+          <span id="five" class="desc">FIVE</span>X
+        </p>
+        <p>
+          <span id="half" class="desc">HALF</span>B
+          <span id="ten" class="desc">TEN</span>F
+          <span id="to" class="desc">TO</span>
+        </p>
+        <p>
+          <span id="past" class="desc">PAST</span>ERU
+          <span id="nine" class="hr">NINE</span>
+        </p>
+        <p>
+          <span id="one" class="hr">ONE</span>
+          <span id="six" class="hr">SIX</span>
+          <span id="three" class="hr">THREE</span>
+        </p>
+        <p id="line-7">
+          <span id="four" class="hr">FOUR</span>
+          <span id="five-hr" class="hr">FIVE</span>
+          <span id="two" class="hr">TWO</span>
+        </p>
+        <p id="line-8">
+          <span id="eight" class="hr">EIGHT</span>
+          <span id="eleven" class="hr">ELEVEN</span>
+        </p>
+        <p id="line-9">
+          <span id="seven" class="hr">SEVEN</span>
+          <span id="twelve" class="hr">TWELVE</span>
+        </p>
+        <p id="line-10">
+          <span id="ten-hr" class="hr">TEN</span>SE
+          <span id="oclock" class="desc">OCLOCK</span>
+        </p>
+        <p id="line-11">
+          <span id="midnight" class="hr">MIDNIGHT</span>
+        </p>
+      </div>
+    </section>
+  </div>
 
-    <nav>
-     <a href="#clock"><i class="fa-solid fa-clock"></i></a>
-     <a href="#about"><i class="fa-duotone fa-solid fa-circle-question"></i></a>
-     <a href="#experts"><i class="fa-duotone fa-solid fa-person-half-dress"></i></a>
-     <a href="#contact"><i class="fa-duotone fa-solid fa-address-card"></i></a>
-    </nav>
-    
-    <!-- seperate div to house the clock -->
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+      </div>
+    </section>
 
-    <div class= 'container-forclock'> 
-      <section id= 'clock'>
-        <div class= 'text-clock'>
-          <p id="hover_menu" style="">erkMedia<br>
-          </p>
-          <p><br>
-          </p>
-          <p id="line-1">
-            <span id="it" class="active">IT</span>L<span id="is" class="active">IS</span>AS<span id="tgif">GTFI</span>
-          </p>
-          <!-- line 2 -->
-          <p id="line-2">
-            AC<span id="quarter" class="desc">QUARTER</span>BS
-          </p>
-          <!-- line 3 -->
-          <p>
-            <span id="twenty" class="desc">TWENTY</span><span id="five" class="desc">FIVE</span>X
-          </p>
-          <!-- line 4 -->
-          <p>
-            <span id="half" class="desc">HALF</span>B<span id="ten" class="desc">TEN</span>F<span id="to" class="desc">TO</span>
-          </p>
-          <!-- line 5 -->
-          <p>
-            <span id="past" class="desc">PAST</span>ERU<span id="nine" class="hr">NINE</span>
-          </p>
-          <!-- line 6 -->
-          <p>
-            <span id="one" class="hr">ONE</span><span id="six" class="hr">SIX</span><span id="three" class="hr">THREE</span>
-          </p>
-          <!-- line 7 -->
-          <p id="line-7">
-            <span id="four" class="hr">FOUR</span><span id="five-hr" class="hr">FIVE</span><span id="two" class="hr">TWO</span>
-          </p>
-          <!-- line 8 -->
-          <p id="line-8">
-            <span id="eight" class="hr">EIGHT</span><span id="eleven" class="hr">ELEVEN</span>
-          </p>
-          <!-- line 9 -->
-          <p id="line-9">
-            <span id="seven" class="hr">SEVEN</span><span id="twelve" class="hr">TWELVE</span>
-          </p>
-          <!-- line 10 -->
-          <p id="line-10">
-            <span id="ten-hr" class="hr">TEN</span>SE<span id="oclock" class="desc">OCLOCK</span>
-          </p>
-          <!-- line 11 -->
-          <p id="line-11">
-            <span id="midnight" class="hr">MIDNIGHT</span>
-          </p>
-        </div>
-      </section>
-    </div>
+    <!-- Experts Section -->
+    <section id="experts">
+      <div class="experts-text">
+        <p>these are our experts</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum.</p>
+      </div>
+    </section>
 
-      <!-- end clock -->
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-text">
+        <p>info@erk.ie</p>
+        <p>privacy policy</p>
+        <p>website licence</p>
+      </div>
+    </section>
+  </main>
 
-    <div class='container'>
-
-      <section id= 'about'>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-      </section>
-      
-      <section id= 'experts'>
-       <h1>these are our experts<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <br>
-        <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <br>
-        <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <br>
-        <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </h1>
-      </section>
-      
-      <section id= 'contact'>
-       <h2>info@erk.ie<br><br>privacy policy<br><br>website licence<br><br></h2>
-      </section>
-
-    </div>
-      
-    <script src='./js/jquery.js'>
-    </script>
-
-    <script  src="./js/index.js">
-    </script>
-
-  </body>
+  <!-- Scripts -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/index.js"></script>
+</body>
 
 </html>

@@ -1,5 +1,7 @@
 This website was created by erkMedia, by combining two pens created at CodePen.io. 
 
+It was also updated by Victor Blanco (https://www.upwork.com/freelancers/~01141c20a0de332c1a?p=1889320711875559424)
+
 You can find the original pens at: 
 https://codepen.io/searleb/pen/pvQaJB
 And
