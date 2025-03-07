@@ -41,20 +41,65 @@ body {
 }
 
 p, span {
-  color: #16130d;
+  color: #333333;
   transition: color 0.4s ease-out;
-  letter-spacing: 12.1px;
+  /*letter-spacing: 12.1px;*/
   font-size: 25px;
 }
 
 #midnight {
-  color: #16130d;
-  letter-spacing: 23.5px;
+  color: #333333;
+  /*letter-spacing: 23.5px;*/
 }
 
 #it, #is, span.active {
   color: #fff !important;
   transition: color 0.4s ease-out;
+}
+
+#line-1, #line-1 span{
+  letter-spacing: 16px;
+  animation: fadein 4s;
+}
+#line-2, #line-2 span{
+  letter-spacing: 13.2px;
+  animation: fadein 4s;
+}
+#line-3, #line-3 span{
+  letter-spacing: 14.2px;
+  animation: fadein 4s;
+}
+#line-4, #line-4 span{
+  letter-spacing: 14.2px;
+  animation: fadein 4s;
+}
+#line-5, #line-5 span{
+  letter-spacing: 13.8px;
+  animation: fadein 4s;
+}
+#line-6, #line-6 span{
+  letter-spacing: 14.2px;
+  animation: fadein 4s;
+}
+#line-7, #line-7 span{
+  letter-spacing: 14px;
+  animation: fadein 4s;
+}
+#line-8, #line-8 span{
+  letter-spacing: 15px;
+  animation: fadein 4s;
+}
+#line-9, #line-9 span{
+  letter-spacing: 13.9px;
+  animation: fadein 4s;
+}
+#line-10, #line-10 span{
+  letter-spacing: 13.9px;
+  animation: fadein 4s;
+}
+#line-11, #line-11 span{
+  letter-spacing: 27px;
+  animation: fadein 4s;
 }
 
 @keyframes fadein {
@@ -89,23 +134,12 @@ nav {
   animation: fadein 2s;
 }
 
-#line-1, #line-1 span,
-#line-2, #line-2 span,
-#line-4, #line-4 span,
-#line-5, #line-5 span,
-#line-7, #line-7 span,
-#line-8, #line-8 span,
-#line-9, #line-9 span,
-#line-10, #line-10 span {
-  letter-spacing: 12.1px;
-  animation: fadein 4s;
-}
-
 .hidden {
   display: none;
 }
 
 section {
+  padding-top: 5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -238,7 +272,7 @@ section:target .experts-text, section:target .about-text, section:target .contac
 
 .contact-text {
   color: ghostwhite;
-  padding-top: 6rem;
+  padding-top: 1rem;
   opacity: 0;
   animation: 2s fadeIn forwards 0.5s;
   text-align: center;
@@ -259,7 +293,7 @@ section:target .experts-text, section:target .about-text, section:target .contac
   text-align: left;
 }
 
- .about-text p:first-child,
+.about-text p:first-child,
 .experts-text p:first-child,
 .contact-text p:first-child {
   margin-top: 0;
