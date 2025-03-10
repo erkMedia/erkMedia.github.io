@@ -22,7 +22,7 @@ body {
   background: #000;
   color: #fff;
   font-family: Krub, Helvetica, Arial;
-  font-weight: 400;
+  font-weight: 200;
   text-align: justify;
   -webkit-user-select: none;
   animation: fadein 7s;
@@ -40,12 +40,16 @@ body {
   align-items: center;
 }
 
+
 p, span {
   color: #333333;
   transition: color 0.4s ease-out;
-  /*letter-spacing: 12.1px;*/
-  font-size: 25px;
+  /*letter-spacing: 12.1px*/
+  font-size: 20px;
+  padding-top: 7px;
 }
+
+
 
 #midnight {
   color: #333333;
@@ -58,43 +62,43 @@ p, span {
 }
 
 #line-1, #line-1 span{
-  letter-spacing: 16px;
+  letter-spacing: 17px;
   animation: fadein 4s;
 }
 #line-2, #line-2 span{
-  letter-spacing: 13.2px;
+  letter-spacing: 14.9px;
   animation: fadein 4s;
 }
 #line-3, #line-3 span{
-  letter-spacing: 14.2px;
+  letter-spacing: 15.5px;
   animation: fadein 4s;
 }
 #line-4, #line-4 span{
-  letter-spacing: 14.2px;
+  letter-spacing: 15.5px;
   animation: fadein 4s;
 }
 #line-5, #line-5 span{
-  letter-spacing: 13.8px;
+  letter-spacing: 15.2px;
   animation: fadein 4s;
 }
 #line-6, #line-6 span{
-  letter-spacing: 14.2px;
+  letter-spacing: 15.7px;
   animation: fadein 4s;
 }
 #line-7, #line-7 span{
-  letter-spacing: 14px;
+  letter-spacing: 15.2px;
   animation: fadein 4s;
 }
 #line-8, #line-8 span{
-  letter-spacing: 15px;
+  letter-spacing: 15.8px;
   animation: fadein 4s;
 }
 #line-9, #line-9 span{
-  letter-spacing: 13.9px;
+  letter-spacing: 15.1px;
   animation: fadein 4s;
 }
 #line-10, #line-10 span{
-  letter-spacing: 13.9px;
+  letter-spacing: 15.1px;
   animation: fadein 4s;
 }
 #line-11, #line-11 span{
