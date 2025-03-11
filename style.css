@@ -226,9 +226,58 @@ section:target .experts-text, section:target .about-text, section:target .contac
     max-height: 100vh;
   }
 
+  p, span {
+    font-size: 16px;
+    padding-top: 7px;
+  }
+
+  #line-1, #line-1 span{
+  letter-spacing: 17.2px;
+  }
+
+  #line-2, #line-2 span{
+    letter-spacing: 15.5px;
+  }
+
+  #line-3, #line-3 span{
+    letter-spacing: 16.2px;
+  }
+
+  #line-4, #line-4 span{
+    letter-spacing: 16.2px;
+  }
+
+  #line-5, #line-5 span{
+    letter-spacing: 15.9px;
+  }
+
+  #line-6, #line-6 span{
+    letter-spacing: 16.1px;
+  }
+
+  #line-7, #line-7 span{
+    letter-spacing: 15.8px;
+  }
+
+  #line-8, #line-8 span{
+    letter-spacing: 16.4px;
+  }
+
+  #line-9, #line-9 span{
+    letter-spacing: 15.7px;
+  }
+
+  #line-10, #line-10 span{
+    letter-spacing: 15.7px;
+  }
+
+  #line-11, #line-11 span{
+    letter-spacing: 27px;
+  }
+
   .text-clock {
-    font-size: 18px !important;
-    letter-spacing: 2px !important;
+    /*font-size: 18px !important;*/
+    /*letter-spacing: 3px !important;*/
     padding-left: 36px;
   }
 
@@ -292,7 +341,7 @@ section:target .experts-text, section:target .about-text, section:target .contac
   text-transform: lowercase;
 }
 
-.contact-text p{
+.contact-text p {
   font-size: 40px;
   text-align: left;
 }
