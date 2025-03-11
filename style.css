@@ -49,8 +49,6 @@ p, span {
   padding-top: 7px;
 }
 
-
-
 #midnight {
   color: #333333;
   /*letter-spacing: 23.5px;*/
@@ -231,48 +229,52 @@ section:target .experts-text, section:target .about-text, section:target .contac
     padding-top: 7px;
   }
 
+  #hover_menu {
+    letter-spacing: 22px;
+  }
+
   #line-1, #line-1 span{
-  letter-spacing: 17.2px;
+  letter-spacing: 13px;
   }
 
   #line-2, #line-2 span{
-    letter-spacing: 15.5px;
+    letter-spacing: 11.3px;
   }
 
   #line-3, #line-3 span{
-    letter-spacing: 16.2px;
+    letter-spacing: 12px;
   }
 
   #line-4, #line-4 span{
-    letter-spacing: 16.2px;
+    letter-spacing: 12px;
   }
 
   #line-5, #line-5 span{
-    letter-spacing: 15.9px;
+    letter-spacing: 11.7px;
   }
 
   #line-6, #line-6 span{
-    letter-spacing: 16.1px;
+    letter-spacing: 11.9px;
   }
 
   #line-7, #line-7 span{
-    letter-spacing: 15.8px;
+    letter-spacing: 11.6px;
   }
 
   #line-8, #line-8 span{
-    letter-spacing: 16.4px;
+    letter-spacing: 12.2px;
   }
 
   #line-9, #line-9 span{
-    letter-spacing: 15.7px;
+    letter-spacing: 11.5px;
   }
 
   #line-10, #line-10 span{
-    letter-spacing: 15.7px;
+    letter-spacing: 11.5px;
   }
 
   #line-11, #line-11 span{
-    letter-spacing: 27px;
+    letter-spacing: 21px;
   }
 
   .text-clock {
