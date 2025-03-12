@@ -5,13 +5,13 @@ function textClock() {
   minutes = newDate.getMinutes().toString(),
   seconds = newDate.getSeconds().toString();
 
-
-
 // Fix for 12 hour format
-if (hours > 12 && hours !== 0 && hours !== 23) {
-        hours = hours - 12;
-    }
-
+if (hours >= 12 && hours !== 0 && hours !== 24) {
+    hours = hours - 12;
+  }
+    else {
+      hours === 0;
+  }
 
 if (minutes < 10) {
   minutes = 0 + minutes;
@@ -20,20 +20,14 @@ if (seconds < 10) {
   seconds = 0 + seconds;
 }
 
-
-
 var minsSecs = minutes + seconds;
 if (minsSecs > 3230) {
   hours++;
 }
 
-
-
 if (day == 5) {
   $("#tgif").html("TGIF");
 }
-
-
 
 hoursObj = {
   1: "#one",
@@ -54,16 +48,14 @@ hoursObj = {
 };
 
 
-
 updateHour(hoursObj[hours]);
 
-
-if (
-(minsSecs >= 5730 && minsSecs < 6000) ||
-(minsSecs >= 0 && minsSecs < 230)
-) {
-  if (hours !== 23 && hours !== 0) {
+if ((minsSecs >= 5730 && minsSecs < 6000) || (minsSecs >= 0 && minsSecs < 230)) {
+  if (hours !== 24 && hours !== 0) {
   updateDesc("#oclock");
+  }
+  else {
+    updateDesc("#midnight")
   }
 } else if (minsSecs >= 230 && minsSecs < 730) {
   updateDesc("#five, #past");
@@ -92,13 +84,10 @@ if (
   }
 }
 
-
-
 function updateDesc(classes) {
   $(".desc").removeClass("active");
   $(classes).addClass("active");
 }
-
 
 
 function updateHour(classes) {
@@ -106,12 +95,9 @@ function updateHour(classes) {
   $(classes).addClass("active");
 }
 
-
-
 setInterval(function () {
   textClock();
 }, 1000);
-
 
 
 window.addEventListener("hashchange", function () {
@@ -125,13 +111,11 @@ window.addEventListener("hashchange", function () {
 });
 
 
-
 function setDefaultSection() {
   if (!window.location.hash) {
   window.location.hash = "clock";
   }
 }
-
 
 
 function restartClockAnimation() {
@@ -145,7 +129,6 @@ function restartClockAnimation() {
 });
 
 
-
 const hoverMenu = document.getElementById("hover_menu");
 if (hoverMenu) {
   hoverMenu.style.animation = "none";
@@ -156,14 +139,12 @@ if (hoverMenu) {
 }
 
 
-
 window.addEventListener("load", () => {
   setDefaultSection();
   if (window.location.hash === "#clock") {
   restartClockAnimation();
   }
 });
-
 
 
 window.addEventListener("hashchange", () => {
