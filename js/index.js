@@ -8,12 +8,9 @@ function textClock() {
 
 
 // Fix for 12 hour format
-if (hours === 12) {
-  hours = 0;
-}
-if (hours > 12) {
-  hours = hours - 12;
-}
+if (hours > 12 && hours !== 0 && hours !== 23) {
+        hours = hours - 12;
+    }
 
 
 if (minutes < 10) {
@@ -65,7 +62,7 @@ if (
 (minsSecs >= 5730 && minsSecs < 6000) ||
 (minsSecs >= 0 && minsSecs < 230)
 ) {
-  if (hours !== 24 && hours !== 0) {
+  if (hours !== 23 && hours !== 0) {
   updateDesc("#oclock");
   }
 } else if (minsSecs >= 230 && minsSecs < 730) {
