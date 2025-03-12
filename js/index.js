@@ -5,9 +5,10 @@ function textClock() {
     minutes = newDate.getMinutes().toString(),
     seconds = newDate.getSeconds().toString();
 
-  if (hours > 12 && hours !== 0 && hours !== 23) {
-    hours = hours - 12;
+   if (hours > 12 || hours == 12 && hours !== 0 && hours !== 23) {
+  hours = hours - 12;
   }
+  
   if (minutes < 10) {
     minutes = 0 + minutes;
   }
