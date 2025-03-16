@@ -6,7 +6,7 @@ function textClock() {
   seconds = newDate.getSeconds().toString();
 
 // Fix for 12 hour format
-if (hours >= 12 && hours !== 0 && hours !== 24) {
+if (hours > 12 && hours !== 0 && hours !== 23) {
     hours = hours - 12;
   }
     else {
