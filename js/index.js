@@ -55,7 +55,7 @@ if ((minsSecs >= 5730 && minsSecs < 6000) || (minsSecs >= 0 && minsSecs < 230)) 
   updateDesc("#oclock");
   }
   else {
-    updateDesc("#midnight")
+    updateDesc("#midnight");
   }
 } else if (minsSecs >= 230 && minsSecs < 730) {
   updateDesc("#five, #past");
