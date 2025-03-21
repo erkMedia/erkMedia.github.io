@@ -5,13 +5,18 @@ function textClock() {
   minutes = newDate.getMinutes().toString(),
   seconds = newDate.getSeconds().toString();
 
+
 // Fix for 12 hour format
+
+/*
 if (hours > 12 && hours !== 0 && hours !== 23) {
     hours = hours - 12;
   }
     else {
       hours === 0;
   }
+  */
+
 
 if (minutes < 10) {
   minutes = 0 + minutes;
@@ -42,6 +47,16 @@ hoursObj = {
   10: "#ten-hr",
   11: "#eleven",
   12: "#twelve",
+  13: "#one",
+  14: "#two",
+  15: "#three",
+  16: "#four",
+  17: "#five-hr",
+  18: "#six",
+  19: "#seven",
+  20: "#eight",
+  21: "#nine",
+  22: "#ten-hr",
   23: "#eleven",
   24: "#midnight",
   0: "#midnight",
@@ -53,7 +68,7 @@ updateHour(hoursObj[hours]);
 if ((minsSecs >= 5730 && minsSecs < 6000) || (minsSecs >= 0 && minsSecs < 230)) {
   if (hours !== 24 && hours !== 0) {
   updateDesc("#oclock");
-  }
+}
   else {
     updateDesc("#midnight");
   }
