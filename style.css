@@ -1,190 +1,279 @@
+/* 
+   RESET AND BASE STYLES
+   */
+
+/* Reset all default browser spacing and sizing */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
+/* link colour */
+a {
+  color: ghostwhite;
+}
+
+/* Color scheme variables - easy to change colors site-wide */
 :root {
-  --primary-color: #000;
-  --secondary-color: #000;
-  --complimentary-color: #455e5e;
-  --contrast-color: #75779a;
-  --light-color: #000;
+  --primary-color: #000;        /*  Black color */
+  --complimentary-color: #455e5e; /* Teal-gray color for about section */
+  --contrast-color: #75779a;    /* Purple-gray color for experts section */
 }
 
+/* 
+   BASIC PAGE LAYOUT
+    */
+
+/* Make page take full browser window */
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden; /* Prevents scrollbars on main page */
 }
 
+/* Main page styling */
 body {
   background: #000;
   color: #fff;
-  font-family: Krub, Helvetica, Arial;
-  font-weight: 200;
-  text-align: justify;
-  -webkit-user-select: none;
-  animation: fadein 7s;
+  font-family: Krub, Helvetica, Arial; 
+  font-weight: 200;                    
+  text-align: justify;                 
+  -webkit-user-select: none;         
+  animation: fadein 7s;              
   display: flex;
-  flex-direction: column;
+  flex-direction: column;             
 }
 
+/* 
+   MAIN CONTAINERS
+    */
+
+/* Main content containers - centers everything on screen */
 .container, .container-forclock {
   background: #000;
   font-family: Krub, Helvetica, Arial, sans-serif;
-  flex: 1; 
+  flex: 1;                            /* Takes up remaining space */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;            /* Centers vertically */
+  align-items: center;                /* Centers horizontally */
 }
 
+/* 
+   TEXT STYLING FOR WORD CLOCK
+    */
 
+/* Default text styling - words appear dim/inactive */
 p, span {
-  color: #333333;
-  transition: color 0.4s ease-out;
-  /*letter-spacing: 12.1px*/
+  color: #333333;                     /* Dark gray - inactive words */
+  transition: color 0.4s ease-out;   /* Smooth color change animation */
   font-size: 20px;
   padding-top: 7px;
 }
 
+/* Midnight text styling */
 #midnight {
   color: #333333;
-  /*letter-spacing: 23.5px;*/
 }
 
+/* Active words - bright white when part of current time */
 #it, #is, span.active {
-  color: #fff !important;
-  transition: color 0.4s ease-out;
+  color: #fff !important;             /* Force white color for active words */
+  transition: color 0.4s ease-out;   /* Smooth transition when activating */
 }
 
-#line-1, #line-1 span{
-  letter-spacing: 17px;
-  animation: fadein 4s;
+/* 
+   WORD CLOCK LINES - Each line has specific letter spacing
+    */
+
+/* Line 1: "IT L IS" */
+#line-1, #line-1 span {
+  letter-spacing: 17px;               /* Space between letters */
+  animation: fadein 4s;               /* Fade in over 4 seconds */
 }
-#line-2, #line-2 span{
+
+/* Line 2: Time words */
+#line-2, #line-2 span {
   letter-spacing: 14.9px;
   animation: fadein 4s;
 }
-#line-3, #line-3 span{
+
+/* Line 3: More time words */
+#line-3, #line-3 span {
   letter-spacing: 15.5px;
   animation: fadein 4s;
 }
-#line-4, #line-4 span{
+
+/* Line 4: Time words */
+#line-4, #line-4 span {
   letter-spacing: 15.5px;
   animation: fadein 4s;
 }
-#line-5, #line-5 span{
+
+/* Line 5: Time words */
+#line-5, #line-5 span {
   letter-spacing: 15.2px;
   animation: fadein 4s;
 }
-#line-6, #line-6 span{
+
+/* Line 6: Time words */
+#line-6, #line-6 span {
   letter-spacing: 15.7px;
   animation: fadein 4s;
 }
-#line-7, #line-7 span{
+
+/* Line 7: Time words */
+#line-7, #line-7 span {
   letter-spacing: 15.2px;
   animation: fadein 4s;
 }
-#line-8, #line-8 span{
+
+/* Line 8: Time words */
+#line-8, #line-8 span {
   letter-spacing: 15.8px;
   animation: fadein 4s;
 }
-#line-9, #line-9 span{
+
+/* Line 9: Time words */
+#line-9, #line-9 span {
   letter-spacing: 15.1px;
   animation: fadein 4s;
 }
-#line-10, #line-10 span{
+
+/* Line 10: Time words */
+#line-10, #line-10 span {
   letter-spacing: 15.1px;
   animation: fadein 4s;
 }
-#line-11, #line-11 span{
+
+/* Line 11: "MIDNIGHT" - extra wide spacing */
+#line-11, #line-11 span {
   letter-spacing: 27px;
   animation: fadein 4s;
 }
 
+/* 
+   ANIMATIONS
+    */
+
+/* Fade in animation - from invisible to visible */
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; }              /* Start invisible */
+  to { opacity: 1; }                /* End fully visible */
 }
 
+/* Fade in animation for text content */
+@keyframes fadeIn {
+  100% { opacity: 1; }              /* End fully visible */
+}
+
+/* 
+   NAVIGATION MENU
+    */
+
+/* Left side navigation bar */
+nav {
+  position: fixed;                  /* Stays in place when scrolling */
+  left: 0;                         /* Attached to left edge */
+  z-index: 50;                     /* Appears above other content */
+  display: flex;
+  justify-content: space-around;   /* Spreads links evenly */
+  flex-direction: column;          /* Stack links vertically */
+  height: 100vh;                   /* Full screen height */
+  background: var(--secondary-color);
+}
+
+/* Navigation links styling */
 nav a {
   font-size: 40px;
   color: #fff;
-  text-decoration: none;
+  text-decoration: none;           /* Removes underlines */
   padding: 20px;
   text-align: center;
 }
 
-nav {
-  position: fixed;
-  left: 0;
-  z-index: 50;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  height: 100vh;
-  background: var(--secondary-color);
-}
-
+/* Special hover menu text with gradient effect */
 #hover_menu {
-  background: -webkit-linear-gradient(gray, darkgray);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(gray, darkgray); /* Gradient from gray to dark gray */
+  -webkit-background-clip: text;    /* Clips background to text shape */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
   letter-spacing: 28px;
   animation: fadein 2s;
 }
 
+/* 
+   PAGE SECTIONS
+    */
+
+/* Hide elements completely */
 .hidden {
   display: none;
 }
 
+/* All page sections - hidden by default, slide in when targeted */
 section {
   padding-top: 1rem;
-  position: absolute;
+  position: absolute;              /* Positioned relative to viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transition: all ease-in 0.5s;
+  opacity: 0;                      /* Start invisible */
+  transition: all ease-in 0.5s;   /* Smooth transition */
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  transform: translateX(-100%); 
+  transform: translateX(-100%);    /* Start off-screen to the left */
+  z-index: 1;                      /* Behind active section */
 }
 
-section .experts-text, section .about-text, section .contact-text {
+/* Text content starts invisible */
+section .experts-text, 
+section .about-text, 
+section .contact-text {
   opacity: 0;
 }
 
+/* When section is targeted (URL hash matches), show it */
 section:target {
-  opacity: 1;
-  z-index: 10;
-  transform: translateX(0); 
+  opacity: 1;                      /* Make visible */
+  z-index: 10;                     /* Bring to front */
+  transform: translateX(0);        /* Slide to normal position */
 }
 
-section:target .experts-text, section:target .about-text, section:target .contact-text {
-  animation: 2s fadeIn forwards 0.5s;
+/* Animate text content when section becomes active */
+section:target .experts-text, 
+section:target .about-text, 
+section:target .contact-text {
+  animation: 2s fadeIn forwards 0.5s; /* Fade in with 0.5s delay */
 }
 
-#clock { background: var(--primary-color); }
+/* 
+   CLOCK SECTION SPECIAL BEHAVIOR
+    */
 
+/* Clock section background */
+#clock { 
+  background: var(--primary-color); 
+}
+
+/* When clock is active, reset and restart line animations */
 #clock:target ~ * [id^="line-"] {
-  animation: none;
+  animation: none;                 /* Stop current animation */
   -webkit-animation: none;
-  opacity: 0;
+  opacity: 0;                      /* Make invisible */
 }
 
 #clock:target ~ * [id^="line-"] {
-  animation: fadein 4s;
+  animation: fadein 4s;            /* Restart fade animation */
   -webkit-animation: fadein 4s;
-  animation-play-state: running;
+  animation-play-state: running;   /* Ensure animation plays */
   -webkit-animation-play-state: running;
 }
 
+/* Reset and restart hover menu animation when clock is active */
 #clock:target ~ * #hover_menu {
   animation: none;
   -webkit-animation: none;
@@ -198,124 +287,41 @@ section:target .experts-text, section:target .about-text, section:target .contac
   -webkit-animation-play-state: running;
 }
 
-#contact { background: var(--light-color); }
+/* 
+   INDIVIDUAL SECTION STYLING
+    */
 
-@keyframes fadeIn {
-  100% { opacity: 1; }
-}
-
-@media (max-width: 460px) {
-  nav {
-    height: auto;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-
-  nav a {
-    font-size: 30px;
-    padding: 10px;
-  }
-
-  section {
-    position: relative;
-    min-height: 100vh;
-    max-height: 100vh;
-  }
-
-  p, span {
-    font-size: 16px;
-    padding-top: 7px;
-  }
-
-  #hover_menu {
-    letter-spacing: 22px;
-  }
-
-  #line-1, #line-1 span{
-  letter-spacing: 13px;
-  }
-
-  #line-2, #line-2 span{
-    letter-spacing: 11.3px;
-  }
-
-  #line-3, #line-3 span{
-    letter-spacing: 12px;
-  }
-
-  #line-4, #line-4 span{
-    letter-spacing: 12px;
-  }
-
-  #line-5, #line-5 span{
-    letter-spacing: 11.7px;
-  }
-
-  #line-6, #line-6 span{
-    letter-spacing: 11.9px;
-  }
-
-  #line-7, #line-7 span{
-    letter-spacing: 11.6px;
-  }
-
-  #line-8, #line-8 span{
-    letter-spacing: 12.2px;
-  }
-
-  #line-9, #line-9 span{
-    letter-spacing: 11.5px;
-  }
-
-  #line-10, #line-10 span{
-    letter-spacing: 11.5px;
-  }
-
-  #line-11, #line-11 span{
-    letter-spacing: 21px;
-  }
-
-  .text-clock {
-    /*font-size: 18px !important;*/
-    /*letter-spacing: 3px !important;*/
-    padding-left: 36px;
-  }
-
-  .experts-text, .about-text {
-    top: 0;
-    width: 100%;
-  }
-}
-
-/* About Section */
-.about-text {
-  font-size: 20px;
-  padding-left: 85px;
-  opacity: 0;
-  animation: 2s fadeIn forwards 0.5s;
-  max-width: 84vw;
-  margin: 0 auto;
-}
-
+/* About section */
 #about { 
-  background: var(--complimentary-color); 
+  background: var(--complimentary-color); /* Teal-gray background */
   display: flex; 
   align-items: center; 
-  justify-content: center;}
+  justify-content: center;
+}
 
+/* About section text content */
+.about-text {
+  font-size: 20px;
+  padding-left: 3rem;
+  opacity: 0;                      /* Start invisible */
+  animation: 2s fadeIn forwards 0.5s; /* Fade in with delay */
+  max-width: 84vw;                 /* Max 84% of viewport width */
+  margin: 0 auto;                  /* Center horizontally */
+}
+
+/* Experts section */
 #experts {
-  background: var(--contrast-color);
+  background: var(--contrast-color); /* Purple-gray background */
   padding-top: 3rem; 
-  overflow-y: auto; 
+  overflow-y: auto;                /* Allow vertical scrolling */
   height: 100vh; 
   box-sizing: border-box; 
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;         /* Align to top */
 }
 
+/* Experts section text content */
 .experts-text {
   padding-left: 85px;
   opacity: 0;
@@ -325,6 +331,12 @@ section:target .experts-text, section:target .about-text, section:target .contac
   padding-bottom: 3rem; 
 }
 
+/* Contact section */
+#contact { 
+  background: var(--light-color); 
+}
+
+/* Contact section text content */
 .contact-text {
   color: ghostwhite;
   padding-top: 1rem;
@@ -333,40 +345,411 @@ section:target .experts-text, section:target .about-text, section:target .contac
   text-align: center;
 }
 
+/* 
+   TEXT CONTENT STYLING
+*/
+
+/* Paragraph styling for all sections */
 .about-text p,
 .experts-text p,
 .contact-text p {
-  margin-bottom: 1.5rem; 
-  letter-spacing: normal;
+  margin-bottom: 1.5rem;           /* Space between paragraphs */
+  letter-spacing: normal;          /* Reset letter spacing */
   font-size: 20px;
   color: ghostwhite;
-  text-transform: lowercase;
+  text-transform: lowercase;       /* Make all text lowercase */
 }
 
-.contact-text p {
+/* Special styling for contact text and links */
+.contact-text p, 
+.contact-text a {
   font-size: 40px;
   text-align: left;
+  text-decoration: none;           /* Remove link underlines */
 }
 
+/* Remove top margin from first paragraphs */
 .about-text p:first-child,
 .experts-text p:first-child,
 .contact-text p:first-child {
   margin-top: 0;
 } 
 
-@media (max-width: 460px) {
+/* 
+   EXPERT PROFILES SECTION
+    */
 
+/* Container for all expert cards */
+.experts-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  padding-left: 3rem;
+  margin: 0 auto;
+  padding-left: 120px;             /* Account for navigation bar */
+}
+
+/* Individual expert card */
+.expert-card {
+  display: flex;                   /* Side-by-side layout */
+  gap: 2rem;                       /* Space between image and text */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 8px;              /* Rounded corners */
+  padding: 1.5rem;
+  margin-bottom: 2rem;             /* Space between cards */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect - card lifts up slightly */
+.expert-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Container for profile image and info */
+.expert-image-container {
+  width: 180px;                    /* Fixed width for consistency */
+  display: flex;
+  flex-direction: column;
+  align-items: center;             /* Center image and text */
+}
+
+/* Profile image styling */
+.expert-image {
+  width: 150px;              
+  height: 150px;
+  border-radius: 50%;              /* Make circular */
+  object-fit: cover;               /* Crop image to fit circle */
+  border: 3px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  margin-bottom: 6px;
+}
+
+/* Expert name and title container */
+.expert-info {
+  text-align: center;
+}
+
+/* Expert name styling */
+.expert-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: ghostwhite;
+}
+
+/* Expert title/role styling */
+.expert-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ccc;                     /* Lighter color for subtitle */
+  font-style: italic;
+}
+
+/* Biography text area */
+.expert-bio {
+  flex: 1;                         /* Takes remaining space */
+  text-align: justify;             /* Even text distribution */
+  line-height: 1.6;                /* Comfortable reading spacing */
+  color: ghostwhite;
+  padding: 0.5rem;
+}
+
+.expert-bio p {
+  color: ghostwhite;
+}
+
+/* 
+   COOKIE CONSENT BANNER
+    */
+
+/* Cookie consent banner - appears at bottom */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);  /* Semi-transparent black */
+  color: ghostwhite;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;                   /* Appears above everything */
+  border-top: 1px solid #333;     /* Subtle border */
+  transform: translateY(100%);     /* Start hidden below screen */
+  transition: transform 0.3s ease-out; /* Smooth slide animation */
+}
+
+/* Show cookie banner */
+.cookie-consent.show {
+  transform: translateY(0);        /* Slide to normal position */
+}
+
+/* Cookie banner text */
+.cookie-consent p {
+  color: ghostwhite;
+  font-size: 14px;
+  margin-bottom: 15px;
+  letter-spacing: normal;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Cookie accept button */
+.cookie-consent-button {
+  background: transparent;
+  border: 1px solid ghostwhite;
+  color: ghostwhite;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;                 /* Hand cursor on hover */
+  transition: all 0.3s ease;      /* Smooth hover effect */
+  font-family: Krub, Helvetica, Arial;
+  margin: 1rem;
+  min-width: 177px;
+}
+
+.btn-underline {
+  color: ghostwhite;
+  font-size: 10px;
+    margin-top: -12px;
+}
+
+/* Button hover effect */
+.cookie-consent-button:hover {
+  background: ghostwhite;          /* Inverted colors */
+  color: #000;
+}
+
+/* Background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);  /* Semi-transparent overlay */
+  z-index: 999;                    /* Below cookie banner */
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* 
+   LEGAL PAGES (LICENSE & PRIVACY)
+    */
+
+/* License section */
+#license:target {
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0); 
+}
+
+/* Privacy section */
+#privacy:target {
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0); 
+}
+
+/* Back arrow icon spacing */
+.fa-arrow-left {
+  margin-right: 8px;
+}
+
+/* Legal page content styling */
+#license .contact-text,
+#privacy .contact-text {
+  text-align: left;
+  margin-left: 120px;              /* Account for navigation */
+  padding: 0 3rem 2rem 3rem;
+  overflow-y: auto;                /* Allow scrolling */
+  max-height: 100vh;
+  width: calc(100vw - 120px);      /* Full width minus navigation */
+  overflow-x: hidden;              /* Prevent horizontal scroll */
+}
+
+/* Legal page paragraph styling */
+#license p,
+#privacy p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: ghostwhite;
+}
+
+/* Shared styles for legal pages */
+.footer-text {
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.back-arrow {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 2rem;  
+  color: white;
+}
+
+.terms-title {
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  font-size: 36px;
+}
+
+.section-title {
+  text-transform: lowercase;
+  margin: 1.5rem 0 0.5rem;
+  font-size: 22px;
+}
+
+/* 
+   RESPONSIVE DESIGN - TABLET BREAKPOINT
+    */
+
+@media (max-width: 768px) {
+  /* Stack expert cards vertically on tablets */
+  .expert-card {
+    flex-direction: column;        /* Stack image above text */
+    gap: 1rem;
+  }
+  
+  .expert-image-container {
+    width: 100%;                   /* Full width */
+  }
+  
+  .expert-image {
+    width: 120px;                  /* Smaller image */
+    height: 120px;
+  }
+
+  /* Legal page adjustments */
+  #license .contact-text,
+  #privacy .contact-text {
+    padding: 1rem;
+  }
+}
+
+/* 
+   RESPONSIVE DESIGN - MOBILE PHONE BREAKPOINT
+    */
+
+@media (max-width: 460px) {
+  /* Mobile navigation - horizontal bar at top */
+  nav {
+    height: auto;
+    width: 100%;
+    flex-direction: row;           /* Horizontal layout */
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 30px;               /* Smaller text */
+    padding: 10px;
+  }
+
+  /* Mobile section adjustments */
+  section {
+    position: relative;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  /* Smaller text on mobile */
+  p, span {
+    font-size: 16px;
+    padding-top: 7px;
+  }
+
+  /* Adjust hover menu spacing */
+  #hover_menu {
+    letter-spacing: 22px;
+  }
+
+  /* Mobile word clock line spacing adjustments */
+  #line-1, #line-1 span { letter-spacing: 13px; }
+  #line-2, #line-2 span { letter-spacing: 11.3px; }
+  #line-3, #line-3 span { letter-spacing: 12px; }
+  #line-4, #line-4 span { letter-spacing: 12px; }
+  #line-5, #line-5 span { letter-spacing: 11.7px; }
+  #line-6, #line-6 span { letter-spacing: 11.9px; }
+  #line-7, #line-7 span { letter-spacing: 11.6px; }
+  #line-8, #line-8 span { letter-spacing: 12.2px; }
+  #line-9, #line-9 span { letter-spacing: 11.5px; }
+  #line-10, #line-10 span { letter-spacing: 11.5px; }
+  #line-11, #line-11 span { letter-spacing: 21px; }
+
+  /* Mobile text clock adjustments */
+  .text-clock {
+    padding-left: 36px;
+  }
+
+  /* Mobile section text positioning */
+  .experts-text, .about-text {
+    top: 0;
+    width: 100%;
+  }
+
+  /* Mobile cookie consent adjustments */
+  .cookie-consent {
+    padding: 15px;
+  }
+  
+  .cookie-consent p {
+    font-size: 12px;
+  }
+
+  /* Mobile experts section */
   .experts-text {
     padding-left: 0;
     padding-top: 85px;
   }
 
+  #experts {
+    padding-top: 5rem;
+    margin: 0 auto;
+  }
+
+  .experts-container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  /* Mobile about section */
   #about {
     padding-top: 140px;
     align-items: flex-start; 
   }
 
-  .about-text{
+  .about-text {
     padding-left: 0;
+  }
+
+  /* Mobile legal pages */
+  #license .contact-text,
+  #privacy .contact-text {
+    margin: 0;
+    margin-top: 6rem;
+    margin-left: 1rem;
+    width: 82%;
+  }
+}
+
+
+/* Adjust cookie consent text for mobile */
+@media (max-width: 460px) {
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cookie-consent-button,
+  .cookie-reject-button {
+    width: 100%;
   }
 }

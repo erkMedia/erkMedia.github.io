@@ -2,162 +2,270 @@
 <html lang="en">
 
 <head>
+  <!-- 
+       DOCUMENT METADATA
+        -->
+
+  <!-- Character encoding - ensures proper display of special characters -->
   <meta charset="UTF-8">
+
+  <!-- Responsive design - makes site work on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="erk media">
+
+  <!-- Search engine description - appears in search results -->
+  <meta name="description" content="erk media.">
+
+  <!-- Page title - appears in browser tab -->
   <title>erk media</title>
+
+  <!-- 
+       EXTERNAL RESOURCES
+        -->
+
+  <!-- Font Awesome icons - provides all the navigation icons -->
   <script src="https://kit.fontawesome.com/7e1ec67686.js" crossorigin="anonymous"></script>
+
+  <!-- Main stylesheet - all visual styling -->
   <link rel="stylesheet" href="./style.css">
+
+  <!-- Google Fonts - Krub font with thin weight (200) -->
   <link href="https://fonts.googleapis.com/css?family=Krub:200" rel="stylesheet">
+
+  <!-- Website icon - appears in browser tab -->
   <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="#clock" aria-label="Go to Clock Section">
-      <i class="fa-solid fa-clock"></i>
+  <!-- 
+       SITE NAVIGATION
+        -->
+
+  <!-- Left sidebar navigation - stays fixed on screen -->
+  <nav role="navigation" aria-label="Main navigation">
+    <!-- Clock section link - shows the word clock -->
+    <a href="#clock" aria-label="Go to Clock Section - View the word clock display">
+      <i class="fa-solid fa-clock" aria-hidden="true"></i>
     </a>
-    <a href="#about" aria-label="Go to About Section">
-      <i class="fa-duotone fa-solid fa-circle-question"></i>
+
+    <!-- About section link - company information -->
+    <a href="#about" aria-label="Go to About Section - Learn about erk Media">
+      <i class="fa-duotone fa-solid fa-circle-question" aria-hidden="true"></i>
     </a>
-    <a href="#experts" aria-label="Go to Experts Section">
-      <i class="fa-duotone fa-solid fa-person-half-dress"></i>
+
+    <!-- Experts section link - team member profiles -->
+    <a href="#experts" aria-label="Go to Experts Section - Meet our team">
+      <i class="fa-duotone fa-solid fa-person-half-dress" aria-hidden="true"></i>
     </a>
-    <a href="#contact" aria-label="Go to Contact Section">
-      <i class="fa-duotone fa-solid fa-address-card"></i>
+
+    <!-- Contact section link - contact information -->
+    <a href="#contact" aria-label="Go to Contact Section - Get in touch">
+      <i class="fa-duotone fa-solid fa-address-card" aria-hidden="true"></i>
     </a>
   </nav>
 
-  <!-- Clock Section -->
-  <div class="container-forclock">
-    <section id="clock">
-      <div class="text-clock">
-        <p id="hover_menu">erkMedia<br><br><br></p>
+  <!-- 
+       WORD CLOCK SECTION
+        -->
 
-        <!-- line 1 -->
-        <p id="line-1">
+  <!-- Container specifically for the clock display -->
+  <div class="container-forclock">
+    <section id="clock" aria-label="Word Clock Display">
+      <div class="text-clock">
+        <!-- Company branding -->
+        <p id="hover_menu" role="banner">erkMedia<br><br><br></p>
+
+        <!-- 
+             WORD CLOCK GRID
+             Each line contains words that change colour
+             to display the time in words
+              -->
+
+        <!-- Line 1: "IT IS" + extra letters -->
+        <p id="line-1" role="text" aria-label="Clock line 1">
           <span id="it" class="active">IT</span>L<span id="is" class="active">IS</span>AS<span id="tgif">GTFI</span>
         </p>
-        <!-- line 2 -->
-        <p id="line-2">
+
+        <!-- Line 2: "QUARTER" + extra letters -->
+        <p id="line-2" role="text" aria-label="Clock line 2">
           AC<span id="quarter" class="desc">QUARTER</span>BS
         </p>
-        <!-- line 3 -->
-        <p id="line-3">
+
+        <!-- Line 3: "TWENTY FIVE" + extra letter -->
+        <p id="line-3" role="text" aria-label="Clock line 3">
           <span id="twenty" class="desc">TWENTY</span><span id="five" class="desc">FIVE</span>X
         </p>
-        <!-- line 4 -->
-        <p id="line-4">
-          <span id="half" class="desc">HALF</span>B<span id="ten" class="desc">TEN</span>F<span id="to" class="desc">TO</span>
-        </p>
-        <!-- line 5 -->
-        <p id="line-5">
-          <span id="past" class="desc">PAST</span>ERU<span id="nine" class="hr">NINE</span>
-        </p>
-        <!-- line 6 -->
-        <p id="line-6">
-          <span id="one" class="hr">ONE</span><span id="six" class="hr">SIX</span><span id="three" class="hr">THREE</span>
-        </p>
-        <!-- line 7 -->
-        <p id="line-7">
-          <span id="four" class="hr">FOUR</span><span id="five-hr" class="hr">FIVE</span><span id="two" class="hr">TWO</span>
-        </p>
-        <!-- line 8 -->
-        <p id="line-8">
-          <span id="eight" class="hr">EIGHT</span><span id="eleven" class="hr">ELEVEN</span>
-        </p>
-        <!-- line 9 -->
-        <p id="line-9">
-          <span id="seven" class="hr">SEVEN</span><span id="twelve" class="hr">TWELVE</span>
-        </p>
-        <!-- line 10 -->
-        <p id="line-10">
-          <span id="ten-hr" class="hr">TEN</span>SE<span id="oclock" class="desc">OCLOCK</span>
-        </p>
-        <!-- line 11 -->
-        <p id="line-11">
-          <span id="midnight" class="hr">MIDNIGHT</span>
+
+        <!-- Line 4: "HALF TEN TO" + extra letters -->
+        <p id="line-4" role="text" aria-label="Clock line 4">
+          <span id="half" class="desc">HALF</span>B<span id="ten" class="desc">TEN</span>F<span id="to"
+            class="desc">TO</span>
         </p>
 
+        <!-- Line 5: "PAST NINE" + extra letters -->
+        <p id="line-5" role="text" aria-label="Clock line 5">
+          <span id="past" class="desc">PAST</span>ERU<span id="nine" class="hr">NINE</span>
+        </p>
+
+        <!-- Line 6: "ONE SIX THREE" (hour numbers) -->
+        <p id="line-6" role="text" aria-label="Clock line 6">
+          <span id="one" class="hr">ONE</span><span id="six" class="hr">SIX</span><span id="three"
+            class="hr">THREE</span>
+        </p>
+
+        <!-- Line 7: "FOUR FIVE TWO" (hour numbers) -->
+        <p id="line-7" role="text" aria-label="Clock line 7">
+          <span id="four" class="hr">FOUR</span><span id="five-hr" class="hr">FIVE</span><span id="two"
+            class="hr">TWO</span>
+        </p>
+
+        <!-- Line 8: "EIGHT ELEVEN" (hour numbers) -->
+        <p id="line-8" role="text" aria-label="Clock line 8">
+          <span id="eight" class="hr">EIGHT</span><span id="eleven" class="hr">ELEVEN</span>
+        </p>
+
+        <!-- Line 9: "SEVEN TWELVE" (hour numbers) -->
+        <p id="line-9" role="text" aria-label="Clock line 9">
+          <span id="seven" class="hr">SEVEN</span><span id="twelve" class="hr">TWELVE</span>
+        </p>
+
+        <!-- Line 10: "TEN OCLOCK" + extra letters -->
+        <p id="line-10" role="text" aria-label="Clock line 10">
+          <span id="ten-hr" class="hr">TEN</span>SE<span id="oclock" class="desc">OCLOCK</span>
+        </p>
+
+        <!-- Line 11: "MIDNIGHT" (special time) -->
+        <p id="line-11" role="text" aria-label="Clock line 11">
+          <span id="midnight" class="hr">MIDNIGHT</span>
+        </p>
       </div>
     </section>
   </div>
 
-  <!-- Main Content -->
-  <main class="container">
-    <!-- About Section -->
-    <section id="about">
+  <!-- 
+       MAIN CONTENT SECTIONS
+        -->
+
+  <main class="container" role="main">
+
+    <!-- 
+         ABOUT SECTION
+          -->
+
+    <section id="about" aria-labelledby="about-heading">
+      <!-- THIS TEXT COULD BE TRANSFERRED TO A JSON FILE TOO -->
       <div class="about-text">
-        <p> erk Media Ltd is a research, innovation, and design hub. <br><br> Our core ideology is to promote interdisciplinary, evidence-based research, and creative, playful design content. We draw on expertise in emerging technology, network theory, ethics, policy, and the creative arts. <br><br>
-        Our experts are selected due to their explicit desire to create positive change.<br><br>
-        We curate advancement throughout the technological, societal, and political spectrum; driven by curiousity, creativity, honesty, transparency, and accountability.</p>
+        <p>
+          erk Media Ltd is a research, innovation, and design hub.
+          <br><br>
+          Our core ideology is to promote interdisciplinary, evidence-based research, and creative, playful design
+          content. We draw on expertise in emerging technology, network theory, ethics, policy, and the creative arts.
+          <br><br>
+          Our experts are selected due to their explicit desire to create positive change.
+          <br><br>
+          We curate advancement throughout the technological, societal, and political spectrum; driven by curiosity,
+          creativity, honesty, transparency, and accountability.
+        </p>
       </div>
     </section>
 
-    <!-- Experts Section -->
-    <section id="experts">
-      <div class="experts-text">
-        <p>these are our experts</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.</p>
+    <!-- 
+         EXPERTS SECTION
+         Team member profiles (loaded from JSON)
+          -->
+
+    <section id="experts" aria-labelledby="experts-heading">
+      <!-- Container where expert profiles will be inserted by JavaScript -->
+      <div class="experts-container" id="experts-container" role="region" aria-label="Expert profiles">
+        <!-- Expert profiles are loaded dynamically from JSON -->
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- 
+         CONTACT SECTION
+         Contact information and legal links
+          -->
+
+    <section id="contact" aria-labelledby="contact-heading">
       <div class="contact-text">
-        <p>info@erk.ie</p>
-        <p>privacy policy</p>
-        <p>website licence</p>
+        <!-- Email address -->
+        <p>
+          <a href="mailto:info@erk.ie" aria-label="Send email to info@erk.ie">info@erk.ie</a>
+        </p>
+
+        <!-- Legal document links -->
+        <p>
+          <a href="#privacy" class="contact-text" aria-label="Read our privacy policy">privacy policy</a>
+        </p>
+        <p>
+          <a href="#license" class="contact-text" aria-label="View website license">website licence</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+         LEGAL SECTIONS
+         License and privacy policy pages
+          -->
+
+    <!-- License information page -->
+    <section id="license" aria-labelledby="license-heading">
+      <div class="contact-text" role="document" aria-label="License information">
+        <!-- License content (loaded from JSON) -->
+      </div>
+    </section>
+
+    <!-- Privacy policy page -->
+    <section id="privacy" aria-labelledby="privacy-heading">
+      <div class="contact-text" role="document" aria-label="Privacy policy">
+        <!-- Privacy policy content (loaded from JSON) -->
       </div>
     </section>
   </main>
 
-  <!-- Scripts -->
+  <!-- 
+       COOKIE CONSENT SYSTEM
+        -->
+
+  <!-- Background overlay that appears behind cookie banner -->
+  <div class="overlay" id="cookieOverlay" aria-hidden="true"></div>
+
+  <!-- Cookie consent banner -->
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-labelledby="cookie-title"
+    aria-describedby="cookie-description">
+    <!-- Cookie consent message -->
+    <p id="cookie-description">
+      This website does not collect or store any personal data.
+      <br>
+      The only data we store is a small setting in your browser, which allows us to hide this message (so we know you
+      have seen it). No data is shared with any other party.
+      <br>
+      Your privacy is respected here.
+    </p>
+
+    <!-- Button container -->
+    <div class="cookie-buttons">
+      <!-- Accept button -->
+      <button class="cookie-consent-button" id="cookieAccept" aria-label="Accept cookie policy and close this message">
+        I understand <div class="btn-underline"><br />Dismiss this message</div>
+      </button>
+
+      <!-- New reject button -->
+      <button class="cookie-consent-button" id="cookieReject" aria-label="Reject cookie storage and continue">
+        I reject this <div class="btn-underline"><br /> See this message again</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- 
+       JAVASCRIPT FILES
+        -->
+
+  <!-- jQuery library - provides JavaScript functionality -->
   <script src="./js/jquery.js"></script>
+
+  <!-- Main JavaScript file - handles clock updates, navigation, and interactions -->
   <script src="./js/index.js"></script>
+
 </body>
 
 </html>
