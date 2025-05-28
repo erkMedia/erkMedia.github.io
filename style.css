@@ -736,7 +736,10 @@ section:target .contact-text {
     margin: 0;
     margin-top: 6rem;
     margin-left: 1rem;
-    width: 82%;
+    width: 90%;
+  }
+  #privacy .contact-text{
+    margin-top: 7rem;
   }
 }
 
@@ -746,10 +749,16 @@ section:target .contact-text {
   .cookie-buttons {
     flex-direction: column;
     gap: 0.5rem;
+    max-width: 200px;
   }
   
   .cookie-consent-button,
   .cookie-reject-button {
     width: 100%;
+    margin: .6rem 0;
+  }
+
+  .back-arrow {
+    margin-bottom: 4rem;
   }
 }
