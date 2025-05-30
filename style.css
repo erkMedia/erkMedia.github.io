@@ -181,7 +181,7 @@ nav {
   justify-content: space-around;   /* Spreads links evenly */
   flex-direction: column;          /* Stack links vertically */
   height: 100vh;                   /* Full screen height */
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 /* Navigation links styling */
@@ -737,6 +737,7 @@ section:target .contact-text {
     margin-top: 6rem;
     margin-left: 1rem;
     width: 90%;
+    min-height: 100vh;
   }
   #privacy .contact-text{
     margin-top: 7rem;
@@ -759,6 +760,6 @@ section:target .contact-text {
   }
 
   .back-arrow {
-    margin-bottom: 4rem;
+    margin-bottom: 12rem;
   }
 }
