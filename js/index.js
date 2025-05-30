@@ -355,8 +355,8 @@ function loadLicenseContent() {
       const backArrow = document.createElement("a");
       backArrow.href = "#contact";
       backArrow.className = "back-arrow";
-      // backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-      backArrow.innerHTML = "<p>back</p>";
+      backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+      // backArrow.innerHTML = "<p>back</p>";
       licenseContainer.appendChild(backArrow);
     })
     .catch((error) => {
@@ -413,8 +413,8 @@ function loadPrivacyContent() {
       const backArrow = document.createElement("a");
       backArrow.href = "#contact";
       backArrow.className = "back-arrow";
-      // backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-      backArrow.innerHTML = "<p>back</p>";
+      backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+      // backArrow.innerHTML = "<p>back</p>";
       privacyContainer.appendChild(backArrow);
     })
     .catch((error) => {
