@@ -344,6 +344,12 @@ function loadLicenseContent() {
         sectionContent.style.marginBottom = "1rem";
         licenseContainer.appendChild(sectionContent);
       });
+      // Add back arrow to return to contact page
+      const backArrow = document.createElement("a");
+      backArrow.href = "#contact";
+      backArrow.className = "back-arrow";
+      backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+      licenseContainer.appendChild(backArrow);
 
       // Add footer text
       const licenseFooter = document.createElement("p");
@@ -351,12 +357,12 @@ function loadLicenseContent() {
       licenseFooter.textContent = data.license.footer;
       licenseContainer.appendChild(licenseFooter);
 
-      // Add back arrow to return to contact page
-      const backArrow = document.createElement("a");
-      backArrow.href = "#contact";
-      backArrow.className = "back-arrow";
-      backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-      licenseContainer.appendChild(backArrow);
+      // // Add back arrow to return to contact page
+      // const backArrow = document.createElement("a");
+      // backArrow.href = "#contact";
+      // backArrow.className = "back-arrow";
+      // backArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+      // licenseContainer.appendChild(backArrow);
     })
     .catch((error) => {
       console.error("Error loading license content:", error);
