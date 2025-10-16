@@ -1,3 +1,7 @@
+// ===== CLOCK INITIALIZATION FLAG =====
+// This flag tracks whether the clock should start
+let clockInitialized = false;
+
 // ===== COOKIE CONSENT SECTION =====
 // This handles the cookie notification popup at the bottom of the page
 // once dismissed the cookie consent can be seen again deleting the local storage
@@ -5,7 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get the elements we need from the page
   const cookieConsent = document.getElementById("cookieConsent");
   const cookieAccept = document.getElementById("cookieAccept");
+  const cookieReject = document.getElementById("cookieReject");
   const cookieOverlay = document.getElementById("cookieOverlay");
+
+  // Function to initialize the clock after cookie banner is handled
+  function initializeClock() {
+    if (!clockInitialized) {
+      clockInitialized = true;
+      
+      // Make the clock visible and start animations
+      const clockSection = document.getElementById("clock");
+      const textClockElement = document.querySelector(".text-clock");
+      
+      if (textClockElement) {
+        textClockElement.classList.add("initialized");
+      }
+      
+      // Start the clock
+      textClock();
+      // Set up the interval to update every second
+      setInterval(function () {
+        textClock();
+      }, 1000);
+      
+      // Trigger the fade-in animation for the clock
+      if (clockSection && window.location.hash === "#clock") {
+        restartClockAnimation();
+      }
+    }
+  }
 
   // Check if user already accepted cookies before
   if (!localStorage.getItem("cookieConsent")) {
@@ -16,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Stop page scrolling while popup is visible
       document.body.style.overflow = "hidden";
     }, 100);
+  } else {
+    // User already accepted - initialize clock immediately
+    initializeClock();
   }
 
   // When user clicks "I understand" button
@@ -27,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieOverlay.classList.remove("show");
     // Allow page scrolling again
     document.body.style.overflow = "";
+    // Initialize the clock now
+    initializeClock();
   });
 
   // When user clicks "I reject" button
@@ -38,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieOverlay.classList.remove("show");
     // Allow page scrolling again
     document.body.style.overflow = "";
+    // Initialize the clock now
+    initializeClock();
   });
 });
 
@@ -155,7 +194,7 @@ function textClock() {
     updateDesc();
   }
 }
-
+``
 // Turn off all time description words, then turn on the ones we need
 function updateDesc(classes) {
   $(".desc").removeClass("active"); // Turn off all description words
@@ -166,10 +205,9 @@ function updateHour(classes) {
   $(".hr").removeClass("active"); // Turn off all hour words
   $(classes).addClass("active"); // Turn on the current hour word
 }
-// Update the clock every second (1000 milliseconds)
-setInterval(function () {
-  textClock();
-}, 1000);
+
+// NOTE: The setInterval is now called from initializeClock() function
+// instead of running immediately
 
 // ===== PAGE NAVIGATION SECTION =====
 // Handle what happens when user clicks navigation links
@@ -218,14 +256,14 @@ function restartClockAnimation() {
 // When page loads, set up default section and animations
 window.addEventListener("load", () => {
   setDefaultSection();
-  if (window.location.hash === "#clock") {
+  if (window.location.hash === "#clock" && clockInitialized) {
     restartClockAnimation();
   }
 });
 
 // When user navigates between sections, restart clock animations if needed
 window.addEventListener("hashchange", () => {
-  if (window.location.hash === "#clock") {
+  if (window.location.hash === "#clock" && clockInitialized) {
     restartClockAnimation();
   }
 });
