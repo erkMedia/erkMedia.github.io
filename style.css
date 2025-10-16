@@ -228,7 +228,7 @@ nav a {
   -webkit-background-clip: text;    /* Clips background to text shape */
   -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
   letter-spacing: 28px;
-  animation: fadein 2s;
+  animation: fadein 3s;
 }
 
 /* 
