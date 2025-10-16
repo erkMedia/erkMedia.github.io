@@ -223,6 +223,7 @@ nav a {
 }
 
 /* Special hover menu text with gradient effect */
+/* Animation for the fade in of the text */
 #hover_menu {
   background: -webkit-linear-gradient(gray, darkgray); /* Gradient from gray to dark gray */
   -webkit-background-clip: text;    /* Clips background to text shape */
