@@ -64,6 +64,35 @@ body {
    TEXT STYLING FOR WORD CLOCK
     */
 
+  /* 
+   CLOCK INITIALIZATION CONTROL
+    */
+
+/* Hide the text clock initially - will be shown after cookie decision */
+.text-clock {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+/* When clock is initialized, this class will make it visible */
+.text-clock.initialized {
+  opacity: 1;
+}
+
+/* Prevent animations from running until clock is initialized */
+.text-clock:not(.initialized) p,
+.text-clock:not(.initialized) span {
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* When initialized, allow animations to run */
+.text-clock.initialized p,
+.text-clock.initialized span {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+
 /* Default text styling - words appear dim/inactive */
 p, span {
   color: #333333;                     /* Dark gray - inactive words */
@@ -687,7 +716,7 @@ section:target .contact-text {
   /* Mobile text clock adjustments */
   .text-clock {
     padding-left: 36px;
-  }
+}
 
   /* Mobile section text positioning */
   .experts-text, .about-text {
